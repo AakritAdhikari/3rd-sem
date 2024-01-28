@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+ //decimal to binary
+
+int main(){
+	
+	int num,rem,binary=0,base=1;
+	cout<<"Enter Deciaml number"<<endl;
+	cin>>num;
+	 while(num>0){
+	 	rem=num%2;
+	 	binary=binary+rem*base;
+	 	num=num/2;
+	 	base=base*10;
+	 }
+	cout<<"Binary number is:"<<binary;
+	return 0;
+}
