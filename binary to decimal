@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+// binary to decimal
+int main() {
+    int binary, decimal = 0, weight = 1;
+    int rem;
+    
+    cout << "Enter the binary:" << endl;
+    cin >> binary;
+    
+    int num = binary;
+    
+    while (num != 0) {
+        rem = num % 10;
+        decimal = decimal + rem * weight;
+        num = num / 10;
+        weight = weight * 2;
+    }
+    
+    cout << "Decimal equivalent of the binary number " << binary << " is " << decimal;
+    return 0;
+}
